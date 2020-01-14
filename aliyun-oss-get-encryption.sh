@@ -1,4 +1,4 @@
-aliyun oss ls | awk -F ' ' '{print substr($5,5,12),$7}' >aliyun_oss_buckets.xls
+aliyun oss ls | awk -F ' ' '{print substr($5,5,20),$7}' >aliyun_oss_buckets.xls
 oss_bucket_region=($(aliyun oss ls | awk -F ' ' '{print substr($5,5,20)}'))
 oss_bucket_name=($(aliyun oss ls | awk -F ' ' '{print substr($7,7,50)}'))
 
